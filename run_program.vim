@@ -3,6 +3,7 @@
 
 " C Program
 function! RunCProgram(name)
-    execute '! ' . g:CCompiler . ' -o ' . a:name . ' ' . a:name . '.c'
+    ! clear
+    execute '! clear; ' . g:CCompiler . ' -o ' . a:name . ' ' . a:name . '.c -lm'
     
 endfunc
